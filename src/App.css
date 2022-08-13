@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #833ab4 0%, #f05151 0%, #fcb045 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator {
+  min-width: 18rem;
+  height: 30.7rem;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px 10px rgba(30, 30, 30, 0.25);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#displaydisplay {
+  box-sizing: border-box;
+  min-height: 9rem;
+  width: 100%;
+  background: black;
+  border-radius: 2rem 2rem 0 0;
+  padding: 0 0.25rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+}
+
+#calculation, #display {
+  box-sizing: border-box;
+  text-align: end;
+  padding: 0 0.5rem;
+  width: 100%;
+  height: fit-content;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#calculation {
+  font-family: "Montserrat", sans-serif;
+  color: #FBFBFB;
+  font-weight: 600;
+}
+
+#display {
+  font-family: "Montserrat", sans-serif;
+  color: #FFB800;
+  font-weight: 800;
+}
+
+#keyboard {
+  height: 21.7rem;
+  width: 100%;
+  background: grey;
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #FBFBFB;
+  overflow: hidden;
+}
+
+#col-1 {
+  height: 100%;
+  background: #FBFBFB;
+}
+
+#col-2 {
+  height: 100%;
+  background: #FBFBFB;
+}
+
+#col-3 {
+  height: 100%;
+  background: #FBFBFB;
+}
+
+#col-4 {
+  height: 100%;
+  background: #FBFBFB;
+}
+
+.button, #clear, #equals {
+  border-radius: 3rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  background: #FBFBFB;
+  color: grey;
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  box-shadow: 2px 4px 3px rgba(43, 43, 43, 0.15), -2px -4px 3px white;
+  transition: 100ms;
+}
+
+.button:hover, #clear:hover, #equals:hover {
+  background: white;
+}
+
+.button:active, #clear:active, #equals:active {
+  background: rgba(43, 43, 43, 0.15);
+  box-shadow: inset 2px 2px 8px rgba(43, 43, 43, 0.15);
+  transform: translate(0.1rem, 0.1rem);
+}
+
+#zero, #clear, #equals {
+  position: absolute;
+  width: 7.8rem;
+}
+
+.operator {
+  border-radius: 3rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  background: #FFB800;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  box-shadow: 2px 4px 3px rgba(43, 43, 43, 0.15), -2px -4px 3px white;
+  transition: 100ms;
+}
+
+.operator:hover {
+  background: #FFD977;
+}
+
+.operator:active {
+  background: #e0a201;
+  box-shadow: inset 2px 2px 8px rgba(43, 43, 43, 0.15);
+  transform: translate(0.1rem, 0.1rem);
+}
+
+#multiply, #divide {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#equals {
+  background: #FFB800;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#equals:hover {
+  background: #FFD977;
+}
+
+#equals:active {
+  background: #e0a201;
+}
+
+#clear {
+  margin-top: 5rem;
+  background: #F8784F;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#clear:hover {
+  background: #FF9B7B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#clear:active {
+  background: #d94718;
+}
+
+.libraries {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  writing-mode: vertical-rl;
+}
+
+#viewport {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
 }
