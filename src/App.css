@@ -13,6 +13,7 @@ body {
 
 #calculator {
   min-width: 15rem;
+  max-width: 18rem;
   height: 30.7rem;
   background-color: white;
   border-radius: 2rem;
